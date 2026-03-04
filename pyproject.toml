@@ -1,0 +1,18 @@
+[project]
+name = "vfitoolkit"
+version = "0.1.0"
+description = "Python translation of the VFI Toolkit with optional GPU acceleration"
+authors = [{ name = "VFI Toolkit Translators" }]
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+gpu = ["cupy-cuda11x>=12.0 ; platform_system == 'Linux'"]
+numba = ["numba>=0.59"]
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
